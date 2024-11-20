@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize';
 import { UserModel } from './user/user';
 import { UniversityModel } from './university/university';
+import { SubjectModel } from './subject/subject';
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
@@ -12,7 +13,8 @@ export const db = {
     Sequelize,
     models: {
         User: UserModel(sequelize),
-        University: UniversityModel(sequelize)
+        University: UniversityModel(sequelize),
+        Subject: SubjectModel(sequelize),
     },
 };
 
